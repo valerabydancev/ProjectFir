@@ -3,6 +3,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Выберите метод" Grid.Column="3" Grid.ColumnSpan="2"/>
+        <Button Content="Button1" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,10,10" Grid.Row="2" VerticalAlignment="Center" Width="75" Height="40"/>
+        <Button Content="Button2" Grid.Column="3" HorizontalAlignment="Left" Margin="10,10,10,10" Grid.Row="2" VerticalAlignment="Center" Width="75" Height="40"/>
+        <Button Content="Button" Grid.Column="5" HorizontalAlignment="Left" Margin="10,10,10,10" Grid.Row="2" VerticalAlignment="Center" Width="75" Height="40"/>
     </Grid>
 </Window>
