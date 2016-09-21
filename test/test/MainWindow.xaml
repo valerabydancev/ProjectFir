@@ -24,7 +24,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Label Content="Выберите метод" FontSize="20" Foreground="{StaticResource ControlBackgroundOver}" Grid.Column="2" Grid.ColumnSpan="5" HorizontalAlignment="Center" Margin="0,20,0,0"/>
-        <Button Content="Метод Джилба" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Center" Width="95" Height="40"/>
+        <Button Content="Метод Джилба" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Center" Width="95" Height="40" Click="Button_Click_1"/>
         <Button Content="Метод Холстеда" Grid.Column="5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Grid.Row="2" VerticalAlignment="Center" Width="95" Height="40" Click="Button_Click"/>
     </Grid>
 </Window>

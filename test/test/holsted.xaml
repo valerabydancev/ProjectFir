@@ -5,6 +5,54 @@
         MaxHeight="400" MaxWidth="600" MinHeight="400" MinWidth="600"
         WindowState="Maximized" Background="#333">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="45*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Label Content="Метод Холстеда" Grid.Column="6" Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" FontSize="16" Foreground="{StaticResource ControlBackgroundOver}" />
+        <TextBox x:Name="tex1" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="3" Margin="0,0,0,26" Grid.RowSpan="2" />
+        <Label Content="Введите кол-во простых операторов" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="6" HorizontalAlignment="Center" FontSize="12" Foreground="{StaticResource ControlBackgroundOver}" Margin="6,0"/>
+        <TextBox x:Name="tex2" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="3" Margin="0,0,0,26" Grid.RowSpan="2" />
+        <Label Content="Введите кол-во простых операндов" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="6" HorizontalAlignment="Center" FontSize="12" Foreground="{StaticResource ControlBackgroundOver}" Margin="10,0"/>
+        <TextBox x:Name="TEX1" Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="3" Margin="0,0,0,26" Grid.RowSpan="2" />
+        <Label Content="Введите число всех операторов и операций" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="7" HorizontalAlignment="Center" FontSize="12" Foreground="{StaticResource ControlBackgroundOver}" Margin="9,0"/>
+        <TextBox x:Name="TEX2" Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="3" Margin="0,0,0,25" Grid.RowSpan="2" />
+        <Label Content="Введите кол-во всех операндов " Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="6" HorizontalAlignment="Center" FontSize="12" Foreground="{StaticResource ControlBackgroundOver}" Margin="18,0"/>
+        <Button Content="Рассчитать" Grid.Column="6" Grid.Row="10" Grid.ColumnSpan="2" Click="Button_Click"/>
+        <Label x:Name="Label1" Grid.Column="10" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" Margin="40,0,41,0"/>
+        <Label x:Name="Label2" Grid.Column="10" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" Margin="40,0,41,0"/>
+        <Label x:Name="Label3" Grid.Column="10" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" Margin="40,0,41,0"/>
+        <Label x:Name="Label4" Grid.Column="10" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" Margin="40,0,41,0"/>
+        <Label x:Name="Label5" Grid.Column="10" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" Margin="40,0,41,0"/>
+        <Label x:Name="Label6" Grid.Column="10" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" Margin="40,0,41,0"/>
+        <Label x:Name="Label7" Grid.Column="10" Grid.Row="8" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" Margin="40,0,41,0"/>
+        <Label x:Name="Label8" Grid.Column="10" Grid.Row="9" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" Margin="40,0,41,0"/>
+        <Button Content="Назад" Grid.Row="10" Grid.ColumnSpan="2" Click="Button_Click_1" Margin="5,0,5,0"/>
     </Grid>
 </Window>

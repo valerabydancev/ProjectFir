@@ -9,35 +9,37 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace test
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Djilba.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Djilba : Window
     {
-        public MainWindow()
+        public Djilba()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            holsted hol = new holsted();
-            this.Hide();
-            hol.Show();
-            this.Close();
+            double CL = Convert.ToDouble(Text1.Text);
+            double L = Convert.ToDouble(Text2.Text);
+
+            double cl = Math.Round(CL / L, 2);
+
+            lab1.Content = "Относительная сложность программы = " + cl;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void back_Click(object sender, RoutedEventArgs e)
         {
-            Djilba dji = new Djilba();
+            MainWindow MW = new MainWindow();
             this.Hide();
-            dji.Show();
+            MW.Show();
             this.Close();
+            
         }
     }
 }
