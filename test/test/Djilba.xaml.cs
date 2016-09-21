@@ -25,12 +25,20 @@ namespace test
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            double CL = Convert.ToDouble(Text1.Text);
-            double L = Convert.ToDouble(Text2.Text);
+            try
+            {
+                double CL = Convert.ToDouble(Text1.Text);
+                double L = Convert.ToDouble(Text2.Text);
 
-            double cl = Math.Round(CL / L, 2);
+                double cl = Math.Round(CL / L, 2);
 
-            lab1.Content = "Относительная сложность программы = " + cl;
+                lab1.Content = "Относительная сложность программы = " + cl;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Заполните поля корректно");
+            }
+            
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
