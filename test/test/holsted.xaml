@@ -35,6 +35,7 @@
             <RowDefinition/>
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
+
         <Label Content="Метод Холстеда" Grid.Column="6" Grid.Row="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" FontSize="16" Foreground="{StaticResource ControlBackgroundOver}" />
         <TextBox x:Name="tex1" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="3" Margin="0,0,0,26" Grid.RowSpan="2" />
         <Label Content="Введите кол-во простых операторов" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="6" HorizontalAlignment="Center" FontSize="12" Foreground="{StaticResource ControlBackgroundOver}" Margin="6,0"/>
@@ -44,18 +45,20 @@
         <Label Content="Введите число всех операторов и операций" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="7" HorizontalAlignment="Center" FontSize="12" Foreground="{StaticResource ControlBackgroundOver}" Margin="9,0"/>
         <TextBox x:Name="TEX2" Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="3" Margin="0,0,0,25" Grid.RowSpan="2" />
         <Label Content="Введите кол-во всех операндов " Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="6" HorizontalAlignment="Center" FontSize="12" Foreground="{StaticResource ControlBackgroundOver}" Margin="18,0"/>
-        
         <Button x:Name="Rasschet" Content="Рассчитать" Grid.Column="6" Grid.Row="10" Grid.ColumnSpan="2" Click="Button_Click123"/>
+        <Canvas>
+            <Button Name="arrow_left2" Width="30" Height="30" Margin="4" Click="arrow_left2_Click" >
+                <Path Width="25" Height="18" Canvas.Left="11" Canvas.Top="15" Stretch="Fill" Fill="{StaticResource FillPath}" Data="{StaticResource chevron_leftStyle0}" />
+            </Button>
+        </Canvas>
         
-        <Label x:Name="Label1" Content="" Grid.Column="7" Grid.Row="2" Grid.ColumnSpan="7" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" />
-        <Label x:Name="Label2" Grid.Column="7" Grid.Row="3" Grid.ColumnSpan="7" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" />
-        <Label x:Name="Label3" Grid.Column="7" Grid.Row="4" Grid.ColumnSpan="7" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" />
-        <Label x:Name="Label4" Grid.Column="7" Grid.Row="5" Grid.ColumnSpan="7" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" />
-        <Label x:Name="Label5" Grid.Column="7" Grid.Row="6" Grid.ColumnSpan="7" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" />
-        <Label x:Name="Label6" Grid.Column="7" Grid.Row="7" Grid.ColumnSpan="7" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" />
-        <Label x:Name="Label7" Grid.Column="7" Grid.Row="8" Grid.ColumnSpan="7" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" />
-        <Label x:Name="Label8" Grid.Column="7" Grid.Row="9" Grid.ColumnSpan="7" HorizontalAlignment="Center" Foreground="{StaticResource ControlBackgroundOver}" />
-        
-        <Button x:Name="back_hol" Content="Назад" Grid.Row="10" Grid.ColumnSpan="2" Margin="5,0,5,0" Click="back_hol_Click"/>
+        <Canvas Grid.Column="13">
+            <Button Name="save" Width="30" Height="30" Margin="4" ToolTip="Сохранить" Click="save_Click" >
+                <Path Width="25" Height="18" Canvas.Left="11" Canvas.Top="15" Stretch="Fill" Fill="{StaticResource FillPath}" Data="{StaticResource diskStyle0}" />
+            </Button>
+        </Canvas>
+        <RichTextBox x:Name="richText" Grid.Column="7" Grid.ColumnSpan="6" Grid.Row="2" Grid.RowSpan="8" Height="220" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" KeyDown="richText_KeyDown"/>
+        <TextBox x:Name="put" Grid.Column="11" Grid.ColumnSpan="2" Grid.Row="1"/>
+        <Label Content="Введите путь и имя файла:" Grid.Column="7" Grid.ColumnSpan="4" Grid.Row="1" Foreground="{StaticResource ControlBackgroundOver}" HorizontalAlignment="Right"/>
     </Grid>
 </Window>

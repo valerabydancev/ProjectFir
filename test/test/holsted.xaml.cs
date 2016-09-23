@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,20 +50,41 @@ namespace test
                 double I = Math.Round(L * V, 2); //Интелектуальное содержание программы
                 double E = Math.Round(V / L, 2); //Работа по программированию
 
-                Label1.Content = "Словарь программы = " + N;
-                Label2.Content = "Длина реализации = " + NLength;
-                Label3.Content = "Длина программы = " + PLength;
-                Label4.Content = "Объем программы в битах = " + V;
-                Label5.Content = "Потенциальный объем программы = " + V1;
-                Label6.Content = "Уровень программы = " + L;
-                Label7.Content = "Интелект. содержание программы = " + I;
-                Label8.Content = "Работа по программированию = " + E;
+                richText.AppendText("Словарь программы = " + N + " \n Длина реализации = "+NLength+" \n Длина программы = "+PLength+" \n Объем программы в битах = "+V+" \n Потенциальный объем программы = "+V1+" \n Уровень программы = "+L+" \n Интелектуальное содержание программы = "+I+" \n Работа по программированию = "+E);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Заполните поля корректно");
             }
             
+        }
+
+        private void arrow_left2_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow MW = new MainWindow();
+            this.Hide();
+            MW.Show();
+            this.Close();
+        }
+
+        private void save_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string PutText = put.Text;
+                string Text = new TextRange(richText.Document.ContentStart, richText.Document.ContentEnd).Text;
+                File.WriteAllText(PutText, Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Укажите корректные данные");
+            }
+            
+        }
+
+        private void richText_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,22 +33,35 @@ namespace test
 
                 double cl = Math.Round(CL / L, 2);
 
-                lab1.Content = "Относительная сложность программы = " + cl;
+                richText.AppendText("Относительная сложность программы = "+cl);
             }
             catch (Exception)
             {
                 MessageBox.Show("Заполните поля корректно");
             }
-            
         }
 
-        private void back_Click(object sender, RoutedEventArgs e)
+
+        private void arrow_left_Click(object sender, RoutedEventArgs e)
         {
             MainWindow MW = new MainWindow();
             this.Hide();
             MW.Show();
             this.Close();
-            
+        }
+
+        private void save_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string PutText = put.Text;
+                string Text = new TextRange(richText.Document.ContentStart, richText.Document.ContentEnd).Text;
+                File.WriteAllText(PutText, Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Укажите корректные данные");
+            }
         }
     }
 }
