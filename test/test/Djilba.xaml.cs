@@ -30,9 +30,9 @@ namespace test
             {
                 double CL = Convert.ToDouble(Text1.Text);
                 double L = Convert.ToDouble(Text2.Text);
-
                 double cl = Math.Round(CL / L, 2);
 
+                richText.Document.Blocks.Clear();
                 richText.AppendText("Относительная сложность программы = "+cl);
             }
             catch (Exception)
