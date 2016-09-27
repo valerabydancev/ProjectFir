@@ -63,5 +63,15 @@ namespace test
                 MessageBox.Show("Укажите корректные данные");
             }
         }
+
+        private void Text1_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = "0123456789 ,".IndexOf(e.Text) < 0;
+        }
+
+        private void Text2_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = "0123456789 ,".IndexOf(e.Text) < 0;
+        }
     }
 }

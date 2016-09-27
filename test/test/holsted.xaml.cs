@@ -87,6 +87,26 @@ namespace test
         {
             e.Handled = true;
         }
+
+        private void tex1_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = "0123456789 ,".IndexOf(e.Text) < 0;
+        }
+
+        private void tex2_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = "0123456789 ,".IndexOf(e.Text) < 0;
+        }
+
+        private void TEX1_PreviewTextInput_1(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = "0123456789 ,".IndexOf(e.Text) < 0;
+        }
+
+        private void TEX2_PreviewTextInput_1(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = "0123456789 ,".IndexOf(e.Text) < 0;
+        }
     }
 
     
